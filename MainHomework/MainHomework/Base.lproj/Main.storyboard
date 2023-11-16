@@ -390,18 +390,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="kdjhfskhdlskhl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFH-z8-MU5">
-                                <rect key="frame" x="41" y="160" width="109" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Каждый из" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFH-z8-MU5">
+                                <rect key="frame" x="8" y="160" width="87" height="21"/>
                                 <color key="backgroundColor" red="0.86078917980000003" green="0.86065389910000001" blue="0.52754768799999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="jhesdshdb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJQ-Y0-uCg">
-                                <rect key="frame" x="214" y="160" width="80" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="251" verticalCompressionResistancePriority="250" text="Yesterday all my troubles seemed so far" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJQ-Y0-uCg">
+                                <rect key="frame" x="103" y="160" width="264" height="21"/>
                                 <color key="backgroundColor" red="0.7233967187" green="0.72196907649999997" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="vIm-3h-m7O"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -409,6 +410,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kEH-FM-kX1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UJQ-Y0-uCg" firstAttribute="leading" secondItem="tFH-z8-MU5" secondAttribute="trailing" constant="8" id="VrQ-8X-Qfi"/>
+                            <constraint firstItem="kEH-FM-kX1" firstAttribute="trailing" secondItem="UJQ-Y0-uCg" secondAttribute="trailing" constant="8" id="bY1-GO-8em"/>
+                            <constraint firstItem="tFH-z8-MU5" firstAttribute="leading" secondItem="kEH-FM-kX1" secondAttribute="leading" constant="8" id="eQj-5b-IEb"/>
+                            <constraint firstItem="tFH-z8-MU5" firstAttribute="top" secondItem="kEH-FM-kX1" secondAttribute="top" constant="116" id="ylc-iR-6jX"/>
+                            <constraint firstItem="tFH-z8-MU5" firstAttribute="baseline" secondItem="UJQ-Y0-uCg" secondAttribute="baseline" id="zsr-xl-Bfb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BBu-Fa-Zsw"/>
                 </viewController>
