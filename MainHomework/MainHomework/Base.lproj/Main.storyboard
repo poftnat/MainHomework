@@ -407,22 +407,53 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Первая строчка" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFU-ES-tT9">
+                                <rect key="frame" x="8" y="231" width="359" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Вторая строчка" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="paX-yT-Onn">
+                                <rect key="frame" x="8" y="315" width="359" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkq-cs-eAN">
+                                <rect key="frame" x="140" y="393" width="94" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Compare"/>
+                                <connections>
+                                    <action selector="compareLines:" destination="6GA-ex-rRg" eventType="touchUpInside" id="hga-NW-hAh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kEH-FM-kX1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="paX-yT-Onn" firstAttribute="trailing" secondItem="SFU-ES-tT9" secondAttribute="trailing" id="MBo-EP-xhU"/>
+                            <constraint firstItem="paX-yT-Onn" firstAttribute="leading" secondItem="SFU-ES-tT9" secondAttribute="leading" id="Qy6-WU-H59"/>
                             <constraint firstItem="UJQ-Y0-uCg" firstAttribute="leading" secondItem="tFH-z8-MU5" secondAttribute="trailing" constant="8" id="VrQ-8X-Qfi"/>
                             <constraint firstItem="kEH-FM-kX1" firstAttribute="trailing" secondItem="UJQ-Y0-uCg" secondAttribute="trailing" constant="8" id="bY1-GO-8em"/>
                             <constraint firstItem="tFH-z8-MU5" firstAttribute="leading" secondItem="kEH-FM-kX1" secondAttribute="leading" constant="8" id="eQj-5b-IEb"/>
+                            <constraint firstItem="SFU-ES-tT9" firstAttribute="leading" secondItem="kEH-FM-kX1" secondAttribute="leading" constant="8" id="ege-8s-rUR"/>
+                            <constraint firstItem="SFU-ES-tT9" firstAttribute="top" secondItem="tFH-z8-MU5" secondAttribute="bottom" constant="50" id="kqi-Fu-lPg"/>
+                            <constraint firstItem="paX-yT-Onn" firstAttribute="top" secondItem="SFU-ES-tT9" secondAttribute="bottom" constant="50" id="l7W-BR-tlV"/>
+                            <constraint firstItem="kEH-FM-kX1" firstAttribute="trailing" secondItem="SFU-ES-tT9" secondAttribute="trailing" constant="8" id="pon-ly-kBO"/>
                             <constraint firstItem="tFH-z8-MU5" firstAttribute="top" secondItem="kEH-FM-kX1" secondAttribute="top" constant="116" id="ylc-iR-6jX"/>
                             <constraint firstItem="tFH-z8-MU5" firstAttribute="baseline" secondItem="UJQ-Y0-uCg" secondAttribute="baseline" id="zsr-xl-Bfb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BBu-Fa-Zsw"/>
+                    <connections>
+                        <outlet property="leftLabelTextField" destination="SFU-ES-tT9" id="gsF-yU-V3h"/>
+                        <outlet property="leftTextLabel" destination="tFH-z8-MU5" id="HYJ-LR-UsT"/>
+                        <outlet property="rightLabelTextField" destination="paX-yT-Onn" id="NKu-B0-zpJ"/>
+                        <outlet property="rightTextLabel" destination="UJQ-Y0-uCg" id="9Wn-nH-nsC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KMS-yq-bH9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1240" y="-112"/>
+            <point key="canvasLocation" x="-1240.8" y="-112.89355322338831"/>
         </scene>
         <!--Text View Controller-->
         <scene sceneID="gDI-jp-LLe">

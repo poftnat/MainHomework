@@ -9,21 +9,28 @@ import UIKit
 
 class LabelViewController: UIViewController {
 
+    
+    @IBOutlet weak var leftTextLabel: UILabel!
+    
+    @IBOutlet weak var rightTextLabel: UILabel!
+    
+    
+    @IBOutlet weak var leftLabelTextField: UITextField!
+    
+    
+    @IBOutlet weak var rightLabelTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        leftTextLabel.text = " "
+        rightTextLabel.text = " "
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func compareLines(_ sender: Any) {
+        leftTextLabel.text = leftLabelTextField.text
+        rightTextLabel.text = rightLabelTextField.text
     }
-    */
+    
 
 }
