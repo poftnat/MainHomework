@@ -99,15 +99,15 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2P-Wi-TBf">
                                 <rect key="frame" x="94" y="291" width="187.5" height="85"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Task 2"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="К текстовым полям"/>
                                 <connections>
                                     <segue destination="6GA-ex-rRg" kind="show" id="gEX-tT-kbH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoC-xL-6LQ">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoC-xL-6LQ">
                                 <rect key="frame" x="94" y="426" width="187.5" height="84"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Task 3"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="К сворачиваемому лейблу" titleAlignment="center"/>
                                 <connections>
                                     <segue destination="X1e-3b-7NZ" kind="show" id="F4o-Oq-Yqr"/>
                                 </connections>
@@ -115,7 +115,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWB-wa-eV9">
                                 <rect key="frame" x="94" y="156" width="187.5" height="85"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Task 1"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="К кнопкам"/>
                                 <connections>
                                     <segue destination="vYR-sP-qFZ" kind="show" id="JGy-AD-TeL"/>
                                 </connections>

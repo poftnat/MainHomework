@@ -22,8 +22,8 @@ class LabelViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        leftTextLabel.text = " "
-        rightTextLabel.text = " "
+        leftTextLabel.text = "     "
+        rightTextLabel.text = "     "
 
     }
     
