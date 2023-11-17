@@ -19,13 +19,9 @@ class TextViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
     }
     
     func setupUI() {
-        
-        //есть мнение, что здесь это не пишется, а пишется выше.
-        
         changeButton.setTitle("Развернуть", for: .normal)
         changeButton.setTitleColor(.white, for: .normal)
         changeButton.backgroundColor = .systemMint
@@ -34,16 +30,12 @@ class TextViewController: UIViewController {
         
         view.addSubview(changeButton)
         
-        
         changeButton.translatesAutoresizingMaskIntoConstraints = false
         changeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50).isActive = true
         changeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         changeButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
         changeButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
         
-        //        let labelFrame = CGRect(x: 50, y: 100, width: 200, height: 50)
-        //
-        //        myLabel.frame = labelFrame
         myLabel.numberOfLines = 0
         myLabel.lineBreakMode = .byWordWrapping
         myLabel.text = staticText
@@ -60,9 +52,7 @@ class TextViewController: UIViewController {
         myLabel.translatesAutoresizingMaskIntoConstraints = false
         myLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         myLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
-        
         myLabel.widthAnchor.constraint(equalToConstant: 400).isActive = true
-        //сделано тупо, но как прикрутить размер шрифта к высоте строки, не придумалa
         heightConstraint = myLabel.heightAnchor.constraint(equalToConstant: height)
         heightConstraint.isActive = true
         
@@ -92,11 +82,6 @@ class TextViewController: UIViewController {
     }
 }
 
-
-// каждое нечетное нажатие должно увеличивать высоту лейбла на строку
-// каждое четное нажатие должно увеличивать высоту лейбла на 5 строк
-// нужна функция или цикл?
-// в идеале должно быть определено число строк, начальная констрейнта высоты должна быть нулевой
 
 
 

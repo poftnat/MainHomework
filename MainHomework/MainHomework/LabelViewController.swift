@@ -9,14 +9,11 @@ import UIKit
 
 class LabelViewController: UIViewController {
 
-    
     @IBOutlet weak var leftTextLabel: UILabel!
     
     @IBOutlet weak var rightTextLabel: UILabel!
     
-    
     @IBOutlet weak var leftLabelTextField: UITextField!
-    
     
     @IBOutlet weak var rightLabelTextField: UITextField!
     
@@ -32,5 +29,4 @@ class LabelViewController: UIViewController {
         rightTextLabel.text = rightLabelTextField.text
     }
     
-
 }
