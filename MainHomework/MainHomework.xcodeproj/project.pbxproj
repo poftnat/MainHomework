@@ -13,6 +13,13 @@
 		4FBFC4322B000E69000B2000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBFC4302B000E69000B2000 /* Main.storyboard */; };
 		4FBFC4342B000E6A000B2000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBFC4332B000E6A000B2000 /* Assets.xcassets */; };
 		4FBFC4372B000E6A000B2000 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBFC4352B000E6A000B2000 /* LaunchScreen.storyboard */; };
+		4FC49B9E2B06AE0400E9BFEC /* TaskOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC49B9D2B06AE0400E9BFEC /* TaskOneViewController.swift */; };
+		4FC49BA02B06AE3500E9BFEC /* OneOfTaskOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC49B9F2B06AE3500E9BFEC /* OneOfTaskOneViewController.swift */; };
+		4FC49BA22B06AE5400E9BFEC /* TwoOfTaskOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC49BA12B06AE5400E9BFEC /* TwoOfTaskOneViewController.swift */; };
+		4FC49BA42B06AE7500E9BFEC /* ThreeOfTaskOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC49BA32B06AE7500E9BFEC /* ThreeOfTaskOneViewController.swift */; };
+		4FC49BA62B06AE8600E9BFEC /* FourOfTaskOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC49BA52B06AE8600E9BFEC /* FourOfTaskOneViewController.swift */; };
+		4FC49BA82B06B00800E9BFEC /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC49BA72B06B00800E9BFEC /* LabelViewController.swift */; };
+		4FC49BAA2B06B01800E9BFEC /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC49BA92B06B01800E9BFEC /* TextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		4FBFC4332B000E6A000B2000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FBFC4362B000E6A000B2000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FBFC4382B000E6A000B2000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FC49B9D2B06AE0400E9BFEC /* TaskOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOneViewController.swift; sourceTree = "<group>"; };
+		4FC49B9F2B06AE3500E9BFEC /* OneOfTaskOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneOfTaskOneViewController.swift; sourceTree = "<group>"; };
+		4FC49BA12B06AE5400E9BFEC /* TwoOfTaskOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoOfTaskOneViewController.swift; sourceTree = "<group>"; };
+		4FC49BA32B06AE7500E9BFEC /* ThreeOfTaskOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeOfTaskOneViewController.swift; sourceTree = "<group>"; };
+		4FC49BA52B06AE8600E9BFEC /* FourOfTaskOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourOfTaskOneViewController.swift; sourceTree = "<group>"; };
+		4FC49BA72B06B00800E9BFEC /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
+		4FC49BA92B06B01800E9BFEC /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +72,15 @@
 			children = (
 				4FBFC42A2B000E69000B2000 /* AppDelegate.swift */,
 				4FBFC42C2B000E69000B2000 /* SceneDelegate.swift */,
-				4FBFC42E2B000E69000B2000 /* ViewController.swift */,
 				4FBFC4302B000E69000B2000 /* Main.storyboard */,
+				4FBFC42E2B000E69000B2000 /* ViewController.swift */,
+				4FC49B9D2B06AE0400E9BFEC /* TaskOneViewController.swift */,
+				4FC49B9F2B06AE3500E9BFEC /* OneOfTaskOneViewController.swift */,
+				4FC49BA12B06AE5400E9BFEC /* TwoOfTaskOneViewController.swift */,
+				4FC49BA32B06AE7500E9BFEC /* ThreeOfTaskOneViewController.swift */,
+				4FC49BA52B06AE8600E9BFEC /* FourOfTaskOneViewController.swift */,
+				4FC49BA72B06B00800E9BFEC /* LabelViewController.swift */,
+				4FC49BA92B06B01800E9BFEC /* TextViewController.swift */,
 				4FBFC4332B000E6A000B2000 /* Assets.xcassets */,
 				4FBFC4352B000E6A000B2000 /* LaunchScreen.storyboard */,
 				4FBFC4382B000E6A000B2000 /* Info.plist */,
@@ -138,8 +159,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FC49BA42B06AE7500E9BFEC /* ThreeOfTaskOneViewController.swift in Sources */,
+				4FC49BA02B06AE3500E9BFEC /* OneOfTaskOneViewController.swift in Sources */,
 				4FBFC42F2B000E69000B2000 /* ViewController.swift in Sources */,
+				4FC49BA62B06AE8600E9BFEC /* FourOfTaskOneViewController.swift in Sources */,
 				4FBFC42B2B000E69000B2000 /* AppDelegate.swift in Sources */,
+				4FC49BAA2B06B01800E9BFEC /* TextViewController.swift in Sources */,
+				4FC49BA82B06B00800E9BFEC /* LabelViewController.swift in Sources */,
+				4FC49B9E2B06AE0400E9BFEC /* TaskOneViewController.swift in Sources */,
+				4FC49BA22B06AE5400E9BFEC /* TwoOfTaskOneViewController.swift in Sources */,
 				4FBFC42D2B000E69000B2000 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
