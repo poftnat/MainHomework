@@ -417,9 +417,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkq-cs-eAN">
-                                <rect key="frame" x="140" y="393" width="94" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkq-cs-eAN">
+                                <rect key="frame" x="140.5" y="449" width="94" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Compare"/>
                                 <connections>
@@ -430,8 +429,10 @@
                         <viewLayoutGuide key="safeArea" id="kEH-FM-kX1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bkq-cs-eAN" firstAttribute="centerX" secondItem="paX-yT-Onn" secondAttribute="centerX" id="KdA-Ll-fIh"/>
                             <constraint firstItem="paX-yT-Onn" firstAttribute="trailing" secondItem="SFU-ES-tT9" secondAttribute="trailing" id="MBo-EP-xhU"/>
                             <constraint firstItem="paX-yT-Onn" firstAttribute="leading" secondItem="SFU-ES-tT9" secondAttribute="leading" id="Qy6-WU-H59"/>
+                            <constraint firstItem="bkq-cs-eAN" firstAttribute="centerX" secondItem="YPO-eN-eSa" secondAttribute="centerX" id="R3R-3r-KI3"/>
                             <constraint firstItem="UJQ-Y0-uCg" firstAttribute="leading" secondItem="tFH-z8-MU5" secondAttribute="trailing" constant="8" id="VrQ-8X-Qfi"/>
                             <constraint firstItem="kEH-FM-kX1" firstAttribute="trailing" secondItem="UJQ-Y0-uCg" secondAttribute="trailing" constant="8" id="bY1-GO-8em"/>
                             <constraint firstItem="tFH-z8-MU5" firstAttribute="leading" secondItem="kEH-FM-kX1" secondAttribute="leading" constant="8" id="eQj-5b-IEb"/>
@@ -439,6 +440,7 @@
                             <constraint firstItem="SFU-ES-tT9" firstAttribute="top" secondItem="tFH-z8-MU5" secondAttribute="bottom" constant="50" id="kqi-Fu-lPg"/>
                             <constraint firstItem="paX-yT-Onn" firstAttribute="top" secondItem="SFU-ES-tT9" secondAttribute="bottom" constant="50" id="l7W-BR-tlV"/>
                             <constraint firstItem="kEH-FM-kX1" firstAttribute="trailing" secondItem="SFU-ES-tT9" secondAttribute="trailing" constant="8" id="pon-ly-kBO"/>
+                            <constraint firstItem="bkq-cs-eAN" firstAttribute="top" secondItem="paX-yT-Onn" secondAttribute="bottom" constant="100" id="upd-SA-owz"/>
                             <constraint firstItem="tFH-z8-MU5" firstAttribute="top" secondItem="kEH-FM-kX1" secondAttribute="top" constant="116" id="ylc-iR-6jX"/>
                             <constraint firstItem="tFH-z8-MU5" firstAttribute="baseline" secondItem="UJQ-Y0-uCg" secondAttribute="baseline" id="zsr-xl-Bfb"/>
                         </constraints>
