@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ShopViewController: UIViewController, UISearchBarDelegate {
+final class ShopViewController: UIViewController, UISearchBarDelegate {
     
-    var collectionView: UICollectionView!
-    var layout: UICollectionViewFlowLayout!
+    private var collectionView: UICollectionView!
+    private var layout: UICollectionViewFlowLayout!
     
-    var searchBar: UISearchBar {
+    private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.showsCancelButton = false
         searchBar.delegate = self
@@ -21,9 +21,9 @@ class ShopViewController: UIViewController, UISearchBarDelegate {
         searchBar.placeholder = " Search Here....."
         searchBar.sizeToFit()
         return searchBar
-    }
+    }()
     
-    var source: [Source] = [Source(image: "planet1",
+    private var source: [Source] = [Source(image: "planet1",
                                    recentPrice: "59,99\u{20bd}",
                                    currentPrice: "39,99\u{20bd}",
                                    description: "Saturn",
@@ -57,54 +57,39 @@ class ShopViewController: UIViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        navigationController?.view.backgroundColor = .clear
-        self.title = "Скидки"
         setupCollectionView()
     }
     
-    func setupCollectionView() {
-        
+    private func setupCollectionView() {
+        self.title = "Скидки"
         layout = setupFlowLayout()
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.addSubview(collectionView)
         view.addSubview(searchBar)
+        view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            
-//            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-//            searchBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-//            searchBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-//            searchBar.heightAnchor.constraint(equalToConstant: 20),
-            
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         ])
         
-        
         collectionView.dataSource = self
         collectionView.register(ShopCollectionViewCell.self, forCellWithReuseIdentifier: "\(ShopCollectionViewCell.self)")
         collectionView.backgroundColor = .white
     }
     
-    func setupFlowLayout() -> UICollectionViewFlowLayout { // Задан лейаут коллекции - разметка.
+    private func setupFlowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         
         layout.itemSize = .init(width: 160, height: 320)
-//        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        
         layout.minimumLineSpacing = 5
         layout.minimumInteritemSpacing = 5
-        
         layout.sectionInset = .init(top: 20, left: 20, bottom: 30, right: 20)
-//        layout.headerReferenceSize = .init(width: view.frame.size.width, height: 60)
         
         return layout
     }
-
 }
 
 extension ShopViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -113,12 +98,10 @@ extension ShopViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(ShopCollectionViewCell.self)", for: indexPath) as? ShopCollectionViewCell else {
-            return UICollectionViewCell()
-        }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(ShopCollectionViewCell.self)", for: indexPath) as? ShopCollectionViewCell else { return UICollectionViewCell() }
         
         cell.configure(source: source[indexPath.row])
-            return cell
-            
+        return cell
+        
     }
 }

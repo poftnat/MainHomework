@@ -7,9 +7,9 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     
-    let toTaskOneButton: UIButton = {
+    private lazy var toTaskOneButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
         button.layer.borderColor = UIColor.black.cgColor
@@ -18,11 +18,12 @@ class MainViewController: UIViewController {
         button.setTitle("К первому заданию", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.numberOfLines = 0
-//        button.titleLabel?.lineBreakMode = .byWordWrapping
+        //        button.titleLabel?.lineBreakMode = .byWordWrapping
         button.addTarget(self, action: #selector(toFirstTaskAction), for: .touchUpInside)
         return button
     }()
-    let toTaskTwoButton: UIButton = {
+    
+    private lazy var toTaskTwoButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
         button.layer.borderColor = UIColor.black.cgColor
@@ -33,7 +34,8 @@ class MainViewController: UIViewController {
         button.setTitleColor(.black, for: .normal)
         return button
     }()
-    let toTaskThreeButton: UIButton = {
+    
+    private lazy var toTaskThreeButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
         button.layer.borderColor = UIColor.black.cgColor
@@ -48,9 +50,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
     }
-    func setupUI() {
+    
+   private func setupUI() {
         view.backgroundColor = .white
         view.addSubview(toTaskOneButton)
         view.addSubview(toTaskTwoButton)
@@ -59,7 +61,10 @@ class MainViewController: UIViewController {
         toTaskOneButton.translatesAutoresizingMaskIntoConstraints = false
         toTaskTwoButton.translatesAutoresizingMaskIntoConstraints = false
         toTaskThreeButton.translatesAutoresizingMaskIntoConstraints = false
-        
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             toTaskOneButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             toTaskOneButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
@@ -70,25 +75,24 @@ class MainViewController: UIViewController {
             toTaskTwoButton.leadingAnchor.constraint(equalTo: toTaskOneButton.leadingAnchor),
             toTaskTwoButton.trailingAnchor.constraint(equalTo: toTaskOneButton.trailingAnchor),
             toTaskTwoButton.topAnchor.constraint(equalTo: toTaskOneButton.bottomAnchor, constant: 30),
-
+            
             toTaskThreeButton.topAnchor.constraint(equalTo: toTaskTwoButton.bottomAnchor, constant: 30),
             toTaskThreeButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             toTaskThreeButton.trailingAnchor.constraint(equalTo: toTaskOneButton.trailingAnchor),
             toTaskThreeButton.leadingAnchor.constraint(equalTo: toTaskOneButton.leadingAnchor)
         ])
-        
     }
     
-    @objc func toFirstTaskAction() {
+    @objc private func toFirstTaskAction() {
         let newVC = ShopViewController()
         navigationController?.pushViewController(newVC, animated: true)
     }
-    @objc func toSecondTaskAction() {
+    @objc private func toSecondTaskAction() {
         let newVC = SettingsViewController()
         navigationController?.pushViewController(newVC, animated: true)
     }
-    @objc func toThirdTaskAction() {
-        let newVC = ShopViewController()
+    @objc private func toThirdTaskAction() {
+        let newVC = ScrollViewController()
         navigationController?.pushViewController(newVC, animated: true)
     }
 }

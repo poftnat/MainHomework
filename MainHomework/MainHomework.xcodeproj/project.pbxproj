@@ -19,6 +19,7 @@
 		4FF9A8202B0BC8E7005B8370 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9A81F2B0BC8E7005B8370 /* SettingsViewController.swift */; };
 		4FF9A8222B0BC8FC005B8370 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9A8212B0BC8FC005B8370 /* SettingsTableViewCell.swift */; };
 		4FF9A8242B0BC931005B8370 /* SettingsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9A8232B0BC931005B8370 /* SettingsSource.swift */; };
+		4FF9A8272B0C2C5B005B8370 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9A8262B0C2C5A005B8370 /* ScrollViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		4FF9A81F2B0BC8E7005B8370 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4FF9A8212B0BC8FC005B8370 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		4FF9A8232B0BC931005B8370 /* SettingsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSource.swift; sourceTree = "<group>"; };
+		4FF9A8262B0C2C5A005B8370 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				4FF9A81C2B0AC29F005B8370 /* MainViewController.swift */,
 				4FF9A8252B0C2A11005B8370 /* SettingsTableView */,
 				4FF9A81E2B0BC87D005B8370 /* ShopCollectionViews */,
+				4FF9A8262B0C2C5A005B8370 /* ScrollViewController.swift */,
 				4FBFC42A2B000E69000B2000 /* AppDelegate.swift */,
 				4FBFC42C2B000E69000B2000 /* SceneDelegate.swift */,
 				4FBFC4302B000E69000B2000 /* Main.storyboard */,
@@ -179,6 +182,7 @@
 				4FBFC42B2B000E69000B2000 /* AppDelegate.swift in Sources */,
 				4FF9A8192B0A89FC005B8370 /* ShopCollectionViewCell.swift in Sources */,
 				4FF9A8172B0A84B2005B8370 /* CollectionSource.swift in Sources */,
+				4FF9A8272B0C2C5B005B8370 /* ScrollViewController.swift in Sources */,
 				4FF9A8242B0BC931005B8370 /* SettingsSource.swift in Sources */,
 				4FBFC42D2B000E69000B2000 /* SceneDelegate.swift in Sources */,
 			);

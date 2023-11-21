@@ -7,15 +7,16 @@
 
 import UIKit
 
-class SettingsTableViewCell: UITableViewCell {
+final class SettingsTableViewCell: UITableViewCell {
     
-    let settingPicture = UIImageView()
+    private let settingPicture = UIImageView()
     
-    let settingNameLabel: UILabel = {
+    private lazy var settingNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupCell()
@@ -24,7 +25,7 @@ class SettingsTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func setupCell() {
         [settingPicture, settingNameLabel].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -41,12 +42,13 @@ class SettingsTableViewCell: UITableViewCell {
             settingNameLabel.leadingAnchor.constraint(equalTo: settingPicture.trailingAnchor, constant: 8),
             settingNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             settingNameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
-
+            
         ])
     }
+    
     func configure(settings: Settings) {
         settingPicture.image = UIImage(systemName: settings.image)
         settingNameLabel.text = settings.settingName
     }
-
+    
 }

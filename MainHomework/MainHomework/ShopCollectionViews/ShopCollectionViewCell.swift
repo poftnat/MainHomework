@@ -7,9 +7,9 @@
 
 import UIKit
 
-class ShopCollectionViewCell: UICollectionViewCell {
+final class ShopCollectionViewCell: UICollectionViewCell {
     
-    private var imageView: UIImageView = {
+    private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
@@ -19,7 +19,7 @@ class ShopCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    private var recentPriceLabel: UILabel = {
+    private lazy var recentPriceLabel: UILabel = {
         let price = UILabel()
         price.contentMode = .left
         price.font = UIFont.systemFont(ofSize: 16)
@@ -27,7 +27,7 @@ class ShopCollectionViewCell: UICollectionViewCell {
         return price
     }()
     
-    private var currentPriceLabel: UILabel = {
+    private lazy var currentPriceLabel: UILabel = {
         let price = UILabel()
         price.contentMode = .left
         price.font = UIFont.boldSystemFont(ofSize: 20)
@@ -35,7 +35,7 @@ class ShopCollectionViewCell: UICollectionViewCell {
         return price
     }()
     
-    private var descriptionLabel: UILabel = {
+    private lazy var descriptionLabel: UILabel = {
         let description = UILabel()
         description.contentMode = .bottomLeft
         description.font = UIFont.systemFont(ofSize: 16)
@@ -43,7 +43,7 @@ class ShopCollectionViewCell: UICollectionViewCell {
         return description
     }()
     
-    private var discountLabel: UILabel = {
+    private lazy var discountLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 14)
@@ -66,13 +66,16 @@ class ShopCollectionViewCell: UICollectionViewCell {
         recentPriceLabel.translatesAutoresizingMaskIntoConstraints = false
         currentPriceLabel.translatesAutoresizingMaskIntoConstraints = false
         discountLabel.translatesAutoresizingMaskIntoConstraints = false
-        
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -70),
-
+            
             
             recentPriceLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 1),
             recentPriceLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
@@ -94,10 +97,9 @@ class ShopCollectionViewCell: UICollectionViewCell {
             discountLabel.widthAnchor.constraint(equalToConstant: 40),
             discountLabel.bottomAnchor.constraint(equalTo: descriptionLabel.topAnchor)
         ])
-                
-        }
+    }
+    
     func configure(source: Source) {
-        
         imageView.image = UIImage.init(named: source.image)
         recentPriceLabel.text = source.recentPrice
         currentPriceLabel.text = source.currentPrice

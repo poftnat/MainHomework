@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-//в структуре-источнике созданы свойства для картинки, старой и новой цены, описания и лейбл для скидки
 struct Source {
     let image: String
     let recentPrice: String
