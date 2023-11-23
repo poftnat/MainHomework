@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     var collectionView: UICollectionView!
     var layout: UICollectionViewFlowLayout!
     
-    var characters: [Result] = []
+    var characters: [Hero] = []
     
     let networkLoader = CharactersLoader()
 
@@ -57,13 +57,13 @@ class ViewController: UIViewController {
     func setupFlowLayout() -> UICollectionViewFlowLayout { //функция для создания лэйаут (разметки) для коллекции
         let layout = UICollectionViewFlowLayout()
         
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+//        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
         
-        layout.sectionInset = .init(top: 30, left: 30, bottom: 30, right: 30)
-        layout.headerReferenceSize = .init(width: 100, height: 100)
+        layout.sectionInset = .init(top: 10, left: 30, bottom: 30, right: 30)
+        layout.itemSize = .init(width: view.frame.size.width - 16, height: 100)
 
         return layout
     }
@@ -82,5 +82,15 @@ extension ViewController: UICollectionViewDataSource {
         cell.configure(result: characters[indexPath.row])
         
         return cell
+    }
+}
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        var id = characters[indexPath.row].id
+        networkLoader.getCharacterData(id: id ?? 0) { (result) in
+            print(result)
+        }
+        
     }
 }

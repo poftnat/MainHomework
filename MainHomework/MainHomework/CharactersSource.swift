@@ -8,18 +8,18 @@
 import Foundation
 
 struct ResponceData: Decodable {
-    let characters: [Result]
+    let characters: [Hero]
     
     private enum CodingKeys: String, CodingKey {
         case characters = "results"
     }
     
-    init(characters: [Result]) {
+    init(characters: [Hero]) {
         self.characters = characters
     }
 }
 
-struct Result: Decodable {
+struct Hero: Decodable {
     let id: Int?
     let name: String?
     let status: Status?

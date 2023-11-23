@@ -53,6 +53,7 @@ class AllCharactersViewCell: UICollectionViewCell {
         
         self.clipsToBounds = true
         self.backgroundColor = .green
+        self.layer.cornerRadius = 8
         
     }
     
@@ -62,11 +63,14 @@ class AllCharactersViewCell: UICollectionViewCell {
             characterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             characterImageView.heightAnchor.constraint(equalToConstant: 80),
             characterImageView.widthAnchor.constraint(equalToConstant: 80),
-            characterImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+            characterImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            nameLabel.heightAnchor.constraint(equalToConstant: 50),
+            nameLabel.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
     
-    func configure(result: Result) {
+    func configure(result: Hero) {
         
         setupCell()
         

@@ -8,14 +8,14 @@
 import Foundation
 
 protocol CharactersLoaderDelegate {
-    func loaded(characters: [Result])
+    func loaded(characters: [Hero])
 }
 
 class CharactersLoader {
     
     var delegate: CharactersLoaderDelegate?
     
-    func loadCharacters(completion: @escaping ([Result]) -> Void) {
+    func loadCharacters(completion: @escaping ([Hero]) -> Void) {
         let url = URL(string: "https://rickandmortyapi.com/api/character")!
         let request = URLRequest(url: url)
         
@@ -29,15 +29,36 @@ class CharactersLoader {
                 catch {
                     print(error)
                 }
-               
-//                print(characters.count)
-//                self.delegate?.loaded(characters: characters)
+
             }
             
         }
         task.resume()
         
     }
+    func getCharacterData(id: Int, completion: @escaping(Hero) -> Void) {
+        guard let url = URL(string: "https://rickandmortyapi.com/api/character/\(id)") else {
+            return
+        }
+        let request = URLRequest(url: url)
+        
+        let task = URLSession.shared.dataTask(with: request) { data, responce, error in
+            if let data = data {
+                do {
+                    let nameCharacter = try JSONDecoder().decode(Hero.self, from: data)
+                    completion(nameCharacter)
+                }
+                catch {
+                    print(error)
+                }
+                
+            }
+            
+        }
+        task.resume()
+        
+    }
+    
     
 }
 //               let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
